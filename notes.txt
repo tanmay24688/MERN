@@ -1,0 +1,29 @@
+3rd part service auth0 to authenticate token.
+
+next js or remix
+
+command : npm init -y  <-- this will generate package file.
+
+command : npm i express dotenv mongoose bcryptjs jsonwebtoken cookie-parser
+
+exporess: web framewrok
+dotenv: load env variables
+mongoose: interect with mongodb database
+bcryptjs: hashing password
+jsonwebtoken: For authentication
+cookie-parser: for http cookie
+
+add  "type":"module", in package.json file. under description line 4
+
+change in package.json file.
+command : npm i -D nodemon
+
+.env file to setting up environment variables
+.gitignore file and specify name of file or folder you want to ignore in new lines.
+
+async handler : wrap around each controller and allow us to use custom handler.
+
+npm i express-async-handler  <-- for async post reqs
+
+npm create vite@latest frontend
+npm i

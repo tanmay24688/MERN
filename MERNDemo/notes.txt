@@ -1,0 +1,59 @@
+1. npm i express dotenv mongoose bcryptjs jsonwebtoken cookie-parser
+    express: web framework
+    dotenv: load env variables
+    mongoose: interect with mongodb database
+    bcryptjs: hasing password
+    jsonwebtoken: jwts for authentication
+    cookie-parser: parse cookies
+
+2.To run server :node backend/server.js
+3.To avoid keep restarting server install nodemon
+    To install nodemon: npm i -D nodemon
+    after installation: npm run server
+    In package.json below change is already there.
+    /*
+    "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js"
+    },
+    */
+
+to read .env file
+
+import dotenv from 'dotenv';
+dotenv.config();
+const port=process.env.PORT || 5000;
+
+4.npm i express-async-handler
+    to handle async functionality.
+
+    In userController.js file
+    import asynchandler from 'express-async-handler';
+    //@desc auth user/set token
+    //route POST /api/users/auth
+    //@access public
+    const authUser=asynchandler(async(req,res)=>{
+        res.status(200).json({message:'Auth user'})
+    });
+
+5.
+npm create vite@latest frontend
+npm i
+
+6.npm i -D concurrently
+In package.json :
+
+"scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm run dev --prefix frontend",
+    "dev":"concurrently \"npm run server\" \"npm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+7. D:\GitRepos\MERN\MERNDemo\frontend> npm i react-bootstrap react-icon
+8. D:\GitRepos\MERN\MERNDemo\frontend> npm i bootstrap
+9. npm i react-router-dom react-router-bootstrap
+10. npm i @reduxjs/toolkit react-reduxjs
+useDispatch: Dispach an authentication
+useSelector: to select state
